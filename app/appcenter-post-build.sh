@@ -6,6 +6,7 @@ if [ "$AGENT_JOBSTATUS" == "Succeeded" ]; then
     echo $APPCENTER_OUTPUT_DIRECTORY
     firebase appdistribution:distribute $APPCENTER_OUTPUT_DIRECTORY/app-release.apk  \
     --app $FIREBASE_APPID  \
+    --token $FIREBASE_TOKEN \
     --release-notes "first release!" --testers "08_provers_visitor@icloud.com"
     echo "Fadin the build was successful!"
     # # Example: Upload main branch app binary to HockeyApp using the API
