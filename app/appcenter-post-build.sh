@@ -1,6 +1,8 @@
 if [ "$AGENT_JOBSTATUS" == "Succeeded" ]; then
     # HOCKEYAPP_API_TOKEN={API_Token}
     # HOCKEYAPP_APP_ID={APP_ID}
+    npm version
+    npm install -g firebase-tools
     echo "Fadin the build was successful!"
     # # Example: Upload main branch app binary to HockeyApp using the API
     # if [ "$APPCENTER_BRANCH" == "main" ];
