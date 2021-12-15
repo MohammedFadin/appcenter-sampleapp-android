@@ -3,7 +3,7 @@ if [ "$AGENT_JOBSTATUS" == "Succeeded" ]; then
     npm install -g firebase-tools
     echo $APPCENTER_OUTPUT_DIRECTORY
     # # Example: Upload main branch app binary to HockeyApp using the API
-    if [ "$APPCENTER_BRANCH" == "main" ];
+    if [ "$APPCENTER_BRANCH" == "master" ];
      then
         firebase appdistribution:distribute $APPCENTER_OUTPUT_DIRECTORY/app-release.apk  \
         --app $FIREBASE_APPID  \
@@ -11,6 +11,6 @@ if [ "$AGENT_JOBSTATUS" == "Succeeded" ]; then
         --release-notes "first release!" --testers "08_provers_visitor@icloud.com"
         echo "Pushing to Firebase was successful!"
     else
-        echo "Can't push to Firebase, the current branch is $APPCENTER_BRANCH not a Main branch"
+        echo "Can't push to Firebase, the current branch is $APPCENTER_BRANCH not a master branch"
     fi
 fi
