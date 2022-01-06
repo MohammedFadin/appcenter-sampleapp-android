@@ -1,4 +1,4 @@
-# Visual Studio App Center Sample App for Android
+# Visual Studio App Center Sample App for Android + Pushing to AppTester FireBase
 
 The Android application in this repository and its corresponding tutorials will help you quickly and easily onboard to Visual Studio App Center.
 
